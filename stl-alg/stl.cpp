@@ -44,7 +44,7 @@ int get_inner_product()
     std::inner_product(u.begin(), 
                        u.end(),
                        v.begin(),
-                       0); //?
+                       0); //accumulator init
 }
 
 int main()
