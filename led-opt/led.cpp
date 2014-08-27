@@ -51,6 +51,9 @@ public:
     }
 
 private:
+    led(const led&) = delete;
+    led const & operator=(const led&) = delete;
+
     const port_t port;
     const pinb_t pinb; 
 
@@ -80,6 +83,9 @@ public:
     }
 
 private:
+    led_opt(const led_opt&) = delete;
+    const led_opt& operator=(const led_opt&) = delete;
+
     static constexpr port_t pdir = port -1U;
 };
 
