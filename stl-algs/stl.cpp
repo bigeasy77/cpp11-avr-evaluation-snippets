@@ -38,12 +38,11 @@ void fill_counters()
               std::numeric_limits<cnt_t>::max());
 }
 
-bool is_clean_counter_set()
+void alter_counters()
 {
     std::for_each(counters.begin(), 
                   counters.end(), 
-                  [](){});
-
+                  [](cnt_t& c){ c+=0x30; });
 }
 
 int get_inner_product()

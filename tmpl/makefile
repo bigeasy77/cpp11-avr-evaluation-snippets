@@ -1,4 +1,4 @@
-TARGET = alloc
+TARGET = stl
 CXX = avr-unknown-elf-g++
 CXXFLAGS = -Wall -Wextra -O3 -pedantic -Weffc++ -std=c++11 -mmcu=atmega328p
 OBJECTS = $(patsubst %.cpp, %.o, $(wildcard *.cpp))

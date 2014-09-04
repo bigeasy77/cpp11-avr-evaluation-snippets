@@ -12,7 +12,7 @@ default: $(TARGET).hex
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(TARGET).elf: $(OBJECTS)
-	$(CXX) -mmcu=atmega328p -nostartfiles -Wl,-Tavr.ld,-Map,led.map $(OBJECTS) crt0.o -o led.elf
+	$(CXX) -mmcu=atmega328p -nostartfiles -Wl,-Tavr.ld,-Map,$(TARGET).map $(OBJECTS) crt0.o -o $(TARGET).elf
 
 $(TARGET).hex: $(TARGET).elf
 	avr-unknown-elf-objcopy -O ihex $< $@	
