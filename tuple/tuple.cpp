@@ -48,6 +48,7 @@ int main()
 {
     constexpr unsigned size =
         std::tuple_size<tuple_t>::value;
+        
     tuple_init_each<size>::init(things);
 }
 
